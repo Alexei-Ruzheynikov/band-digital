@@ -27,7 +27,7 @@ get_header();
     <!--MAIN HEADER AREA END -->
     <section class="section-padding">
         <div class="container">
-            <?php the_content(); ?>
+             <?php the_content(); ?>
         </div>
     </section>
     <!--  ABOUT AREA START  -->
@@ -38,7 +38,7 @@ get_header();
             <div class="section-heading">
               <p class="lead">
                 Мы оказываем маркетинговые услуги с 2016 года за это время мы выполнили больше сотни проеков,
-                подключайтесь к совместной работе с нами
+                подключайтесь к совместной работе с нами!
               </p>
             </div>
           </div>
