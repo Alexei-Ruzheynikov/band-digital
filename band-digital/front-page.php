@@ -10,11 +10,10 @@ get_header();
             <div class="row">
               <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
                 <div class="banner-content content-padding">
-                  <h5 class="subtitle">Диджитал агентство</h5>
-                  <h1 class="banner-title">Мы делаем SEO-продвижение и оказываем digital услуги</h1>
+                  <h5 class="subtitle"><?php echo get_post_meta($post->ID, 'subtitle', true);?></h5>
+                  <h1 class="banner-title"><?php echo get_post_meta($post->ID, 'banner-title', true);?></h1>
                   <p>
-                    К нам обращаются, когда нужно создать лендинг под новый товар или услугу, еще, если нужно продвинуть
-                    имеющийся сайт в топ по поисковым запросам.
+                    <?php echo get_post_meta($post->ID, 'banner-description', true);?>
                   </p>
 
                   <a href="#" class="btn btn-white btn-circled">Начать сотрудничество</a>
@@ -26,6 +25,11 @@ get_header();
       </div>
     </div>
     <!--MAIN HEADER AREA END -->
+    <section class="section-padding">
+        <div class="container">
+            <?php the_content(); ?>
+        </div>
+    </section>
     <!--  ABOUT AREA START  -->
     <section id="intro" class="section-padding">
       <div class="container">
