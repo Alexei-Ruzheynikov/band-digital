@@ -17,6 +17,8 @@ if(! function_exists('band_digital_setup')){
         ]);
         //Добавляем динамический <title>
         add_theme_support( 'title-tag');
+        // Подключаем миниатюры для постов и страниц
+        add_theme_support( 'post-thumbnails' );
     }
     add_action('after_setup_theme', 'band_digital_setup');
 }

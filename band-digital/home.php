@@ -19,6 +19,43 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
+                <div class="row">
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <div class="col-lg-6">
+                            <div class="blog-post">
+                                <?php
+                                if( has_post_thumbnail() ) {
+                                    the_post_thumbnail( 'medium', array(
+                                    'class' => "img-fluid",
+                                ));
+                                }
+                                else {
+                                    echo '<img class="img-fluid" src="'. get_template_directory_uri() .'/images/blog/blog-1.jpg" />';
+                                } 
+                                 ?>
+                               
+                                <!-- <img src="images/blog/blog-1.jpg" alt="" class="img-fluid"> -->
+                                <div class="mt-4 mb-3 d-flex">
+                                    <div class="post-author mr-3">
+                                        <i class="fa fa-user"></i>
+                                        <span class="h6 text-uppercase"><?php the_author(); ?></span>
+                                    </div>
+
+                                    <div class="post-info">
+                                        <i class="fa fa-calendar-check"></i>
+                                        <span><?php the_time('j F Y'); ?></span>
+                                    </div>
+                                </div>
+                                <a href="<?php echo get_the_permalink(); ?>" class="h4 "><?php the_title(); ?></a>
+                                <p class="mt-3"><?php the_excerpt(); ?></p>
+                                <a href="<?php echo get_the_permalink(); ?>" class="read-more">Читать статью <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                <!-- Вывода постов, функции цикла: the_title() и т.д. -->
+                <?php endwhile; else: ?>
+                    Записей нет.
+                <?php endif; ?>
+                </div>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="blog-post">
