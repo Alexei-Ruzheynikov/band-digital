@@ -187,4 +187,18 @@ the_posts_pagination( array(
 	'end_size' => 2,
 ) ); 
 
+
+
+function band_digital_widgets_init() {
+register_sidebar(array(
+    'name'          => esc_html__('Сайдбар блога', 'band_digital'),
+	'id'            => "sidebar-blog",
+	'before_widget' => '<section id="%1$s" class="sidebar-widget %2$s">',
+	'after_widget'  => '</section>',
+	'before_title'  => '<h5 class="widgettitle mb-3">',
+	'after_title'   => '</h5>' 
+));
+}
+add_action('widgets_init', 'band_digital_widgets_init');
+
 ?>
