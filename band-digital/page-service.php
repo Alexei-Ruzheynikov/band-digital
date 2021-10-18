@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
             <div class="banner-content content-padding">
-              <h1 class="text-white">Наши услуги</h1>
+              <h1 class="text-white"><?php the_title(); ?></h1>
               <p>Мы оказываем весь спект диджитал услуг</p>
             </div>
           </div>
@@ -15,9 +15,11 @@
     </div>
     <!--MAIN HEADER AREA END -->
 
+    <?php the_content(); ?>
+
 
         <!--  SERVICE BLOCK2 START  -->
-        <section id="service-2" class="section-padding">
+        <!-- <section id="service-2" class="section-padding">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-4 col-md-6">
@@ -49,11 +51,11 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!--  SERVICE BLOCK2 END  -->
 
         <!--  SERVICE AREA START  -->
-        <section class="section pt-0">
+        <!-- <section class="section pt-0">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-lg-5 col-sm-12 col-md-6 mb-4">
@@ -91,8 +93,9 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!--  SERVICE AREA END  -->
+
         <!--  SERVICE PARTNER START  -->
         <section id="service-head" class="service-style-two">
           <div class="container">
@@ -114,7 +117,43 @@
     <section id="service">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-sm-6 col-md-6">
+          <?php		
+          global $post;
+
+          $query = new WP_Query( [
+            'posts_per_page' => 6,
+            'post_type'        => 'service',
+          ] );
+
+          if ( $query->have_posts() ) {
+            while ( $query->have_posts() ) {
+              $query->the_post();
+              ?>
+              <div class="col-lg-4 col-sm-6 col-md-6">
+            <div class="service-box">
+              <div class="service-img-icon">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="service-icon" class="img-fluid" />
+              </div>
+              <div class="service-inner">
+                <h4><?php the_title(); ?></h4>
+                <p>
+                  <?php the_excerpt(); ?>
+                </p>
+              </div>
+            </div>
+          </div>
+              <?php 
+            }
+          } else {
+            ?>
+            <p>Услуг пока нет.</p>
+            <?php
+          }
+
+          wp_reset_postdata(); // Сбрасываем $post
+          ?>
+
+          <!-- <div class="col-lg-4 col-sm-6 col-md-6">
             <div class="service-box">
               <div class="service-img-icon">
                 <img src="images/icon/007-digital-marketing-3.png" alt="service-icon" class="img-fluid" />
@@ -156,7 +195,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-4 col-sm-6 col-md-6">
             <div class="service-box">
               <div class="service-img-icon">
@@ -198,7 +236,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -208,6 +246,7 @@
     <section class="section-padding">
       <div class="container">
         <div class="row">
+          
           <div class="col-lg-8 text-center text-lg-left">
             <div class="mb-5">
               <h3 class="mb-2">Эти компании доверяют нам</h3>
@@ -216,7 +255,33 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-sm-6 col-md-3 text-center">
+          <?php		
+          global $post;
+
+          $query = new WP_Query( [
+            'posts_per_page' => 4,
+            'post_type'        => 'partners',
+          ] );
+
+          if ( $query->have_posts() ) {
+            while ( $query->have_posts() ) {
+              $query->the_post();
+              ?>
+              <div class="col-lg-3 col-sm-6 col-md-3 text-center">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="partner" class="img-fluid" />
+              </div>
+              <!-- Вывода постов, функции цикла: the_title() и т.д. -->
+              <?php 
+            }
+          } else {
+            // Постов не найдено
+          }
+
+          wp_reset_postdata(); // Сбрасываем $post
+          ?>
+
+          
+          <!-- <div class="col-lg-3 col-sm-6 col-md-3 text-center">
             <img src="images/clients/client01.png" alt="partner" class="img-fluid" />
           </div>
           <div class="col-lg-3 col-sm-6 col-md-3 text-center">
@@ -227,7 +292,7 @@
           </div>
           <div class="col-lg-3 col-sm-6 col-md-3 text-center">
             <img src="images/clients/client05.png" alt="partner" class="img-fluid" />
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

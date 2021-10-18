@@ -844,4 +844,70 @@ class Bootstrap_Walker_Comment extends Walker {
 }
 
 
+//Регистрируем новый тип записи Услуги
+add_action('init', 'my_custom_init');
+function my_custom_init(){
+	register_post_type('service', array(
+		'labels'             => array(
+			'name'               => __('Услуги'), // Основное название типа записи
+			'singular_name'      => __('Услуга'), // отдельное название записи типа Book
+			'add_new'            => __('Добавить новую'),
+			'add_new_item'       => __('Добавить новую услугу'),
+			'edit_item'          => __('Редактировать услугу'),
+			'new_item'           => __('Новая услуга'),
+			'view_item'          => __('Посмотреть услугу'),
+			'search_items'       => __('Найти услугу'),
+			'not_found'          => __('Услуг не найдено'),
+			'not_found_in_trash' => __('В корзине услуг не найдено'),
+			'parent_item_colon'  => '',
+			'menu_name'          => __('Услуги')
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'menu_icon'          => 'dashicons-businessman',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
+	) );
+
+register_post_type('partners', array(
+		'labels'             => array(
+			'name'               => __('Партнеры'), // Основное название типа записи
+			'singular_name'      => __('Партнер'), // отдельное название записи типа Book
+			'add_new'            => __('Добавить нового'),
+			'add_new_item'       => __('Добавить нового партнера'),
+			'edit_item'          => __('Редактировать партнера'),
+			'new_item'           => __('Новый партнер'),
+			'view_item'          => __('Посмотреть партнера'),
+			'search_items'       => __('Найти партнера'),
+			'not_found'          => __('Партнеров не найдено'),
+			'not_found_in_trash' => __('В корзине Партнеров не найдено'),
+			'parent_item_colon'  => '',
+			'menu_name'          => __('Партнеры')
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'menu_icon'          => 'dashicons-info',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
+	) );
+
+}
+
+
 ?>
