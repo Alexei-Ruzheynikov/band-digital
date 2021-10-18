@@ -73,7 +73,8 @@ function band_digital_menus(){
     // собираем несколько зон (областей) меню
     $locations = array(
         'header' => __('Header Menu', 'band_digital'),
-        'footer' => __('Footer Menu', 'band_digital'),
+        'footer_left' => __('Footer Left Menu', 'band_digital'),
+        'footer_right' => __('Footer Right Menu', 'band_digital'),
     );
     // регистрируем области меню, которые лежат в переменной $locations
     register_nav_menus($locations);
@@ -197,6 +198,22 @@ register_sidebar(array(
 	'after_widget'  => '</section>',
 	'before_title'  => '<h5 class="widgettitle mb-3">',
 	'after_title'   => '</h5>' 
+));
+register_sidebar(array(
+    'name'          => esc_html__('Сайдбар в подвале 1 текстовый', 'band_digital'),
+	'id'            => "sidebar-footer-text",
+	'before_widget' => '<div class="footer-widget footer-link %2$s">',
+	'after_widget'  => '</div>',
+	'before_title'  => '<h4>',
+	'after_title'   => '</h4>' 
+));
+register_sidebar(array(
+    'name'          => esc_html__('Сайдбар в подвале 4 контакты', 'band_digital'),
+	'id'            => "sidebar-footer-contacts",
+	'before_widget' => '<div class="footer-widget footer-text %2$s">',
+	'after_widget'  => '</div>',
+	'before_title'  => '<h4>',
+	'after_title'   => '</h4>' 
 ));
 }
 add_action('widgets_init', 'band_digital_widgets_init');
