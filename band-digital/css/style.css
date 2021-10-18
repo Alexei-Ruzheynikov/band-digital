@@ -1296,14 +1296,25 @@ BLOG PAGE
   display: inline-block;
 }
 
-.search i {
+.searchform {
+  position: relative;
+}
+.searchform-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px;
   position: absolute;
   right: 0px;
   top: 0px;
-  margin-right: 35px;
-  margin-top: 15px;
+  margin-right: 15px;
+  height: 100%;
   color: #635cdb;
 }
+
+/* .search i {
+  
+} */
 
 .download a {
   display: block;

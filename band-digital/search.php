@@ -222,7 +222,7 @@
                                 <?php endif; ?>
                         </div>
 
-                        <div class="col-lg-12">
+                        <!-- <div class="col-lg-12">
                             <div class="sidebar-widget about-bar">
                                 <h5 class="mb-3">О нас</h5>
                                 <p>Мы — маркетинговое агентство полного цикла, которое оказывает диджитал услуги стартапам и крупным компаниям</p>
@@ -263,7 +263,7 @@
                                 <a href="#"> <i class="fa fa-file-pdf"></i>Презентация Promodise</a>
                                 <a href="#"> <i class="fa fa-file-pdf"></i>10 источников бесплатного SEO</a>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
