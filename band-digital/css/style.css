@@ -170,7 +170,7 @@ h5.subtitle {
 }
 
 .section-title span {
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .section {
@@ -179,7 +179,7 @@ h5.subtitle {
 
 .line {
   width: 50px;
-  background: #635CDB;
+  background: #635cdb;
   height: 1px;
   margin: 10px auto;
 }
@@ -191,8 +191,8 @@ h5.subtitle {
   padding: 15px 45px 15px 45px;
   text-transform: uppercase;
   border: 2px solid transparent;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   border-radius: 0px;
   font-weight: 600;
   font-size: 13px;
@@ -204,13 +204,13 @@ h5.subtitle {
 .btn:active:focus {
   outline: none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .btn-hero,
 .btn-white:hover {
   color: #fff !important;
-  background: #635CDB;
+  background: #635cdb;
 }
 
 .btn-hero:focus {
@@ -225,7 +225,7 @@ h5.subtitle {
 
 .btn-black:hover {
   color: #fff;
-  background: #635CDB;
+  background: #635cdb;
 }
 
 .btn-black:focus {
@@ -285,7 +285,7 @@ h5.subtitle {
 }
 
 .btn-trans-black:hover {
-  background: #635CDB !important;
+  background: #635cdb !important;
 }
 
 /*---------- COLORS ----------*/
@@ -299,7 +299,7 @@ h5.subtitle {
 }
 
 .bg-feature {
-  background-color: #635CDB;
+  background-color: #635cdb;
 }
 
 .bg-primary {
@@ -333,17 +333,17 @@ h5.subtitle {
 
 .brown-overlay {
   background: #222955;
-  opacity: .97;
+  opacity: 0.97;
 }
 
 .feature-overlay {
-  background: #635CDB;
-  opacity: .97;
+  background: #635cdb;
+  opacity: 0.97;
 }
 
 .gr-overlay {
   background: linear-gradient(135deg, #2f1ce0 0%, #53a0fd 30%, #51eca5 100%);
-  opacity: .87;
+  opacity: 0.87;
 }
 
 /* ========================
@@ -383,9 +383,9 @@ h5.subtitle {
   z-index: 9999;
   width: 100%;
   left: 0;
-  -webkit-transition: all .3s ease 0s;
-  -webkit-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
   color: #000 !important;
 }
 
@@ -401,9 +401,9 @@ h5.subtitle {
 
 .site-navigation,
 .trans-navigation {
-  -webkit-transition: all .3s ease 0s;
-  -webkit-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .navbar-brand {
@@ -435,7 +435,7 @@ h5.subtitle {
 }
 
 .trans-navigation.header-white .navbar-nav a.active {
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .navbar-brand img {
@@ -443,7 +443,7 @@ h5.subtitle {
 }
 
 .trans-navigation.header-white .btn-white {
-  background: #635CDB;
+  background: #635cdb;
   color: #fff;
 }
 
@@ -461,8 +461,10 @@ h5.subtitle {
   visibility: hidden;
   opacity: 0;
   top: 120%;
-  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+    -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
+    -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
   border: 0px;
   padding: 0px;
   position: absolute;
@@ -477,7 +479,7 @@ h5.subtitle {
 .dropdown-item:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #635CDB;
+  background-color: #635cdb;
 }
 
 .dropdown-toggle::after {
@@ -489,8 +491,8 @@ h5.subtitle {
 }
 
 .dropdown-menu.show {
-  -webkit-animation: .2s forwards b;
-          animation: .2s forwards b;
+  -webkit-animation: 0.2s forwards b;
+  animation: 0.2s forwards b;
 }
 
 @-webkit-keyframes b {
@@ -506,19 +508,19 @@ h5.subtitle {
 }
 
 .dropdown-item {
-  font-size: .6875rem;
+  font-size: 0.6875rem;
   font-weight: 500;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  -webkit-transition: background-color .1s;
-  transition: background-color .1s;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
   text-transform: uppercase;
 }
 
 @media (min-width: 1200px) {
   .dropdown-item {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 }
 
@@ -555,7 +557,7 @@ h5.subtitle {
 
 .banner-content .subtitle {
   color: #fff;
-  background: #635CDB;
+  background: #635cdb;
   display: inline-block;
   padding: 3px 8px;
   margin-bottom: 20px;
@@ -563,7 +565,7 @@ h5.subtitle {
 }
 
 .subtitle {
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .banner-content p {
@@ -660,7 +662,7 @@ INner Pages
 
 .intro-box span {
   font-size: 28px;
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .intro-cta {
@@ -731,7 +733,7 @@ ABOUT PAGE
 -------------------------*/
 .about-list2 li i {
   margin-right: 10px;
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .icon-3x {
@@ -739,7 +741,7 @@ ABOUT PAGE
 }
 
 .text-default {
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .team-social li a {
@@ -780,7 +782,7 @@ HISTORY MISSION
 
 .strategy-text span {
   font-size: 61px;
-  color: #635CDB;
+  color: #635cdb;
   margin-bottom: 15px;
   display: block;
 }
@@ -794,7 +796,7 @@ HISTORY MISSION
   font-weight: 700;
   line-height: 70px;
   margin: 10px 0px;
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .counter-stat i {
@@ -861,7 +863,7 @@ HISTORY MISSION
   margin: 0 auto;
   border-radius: 100%;
   margin-bottom: 20px;
-  background: #635CDB;
+  background: #635cdb;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
 }
@@ -872,8 +874,8 @@ HISTORY MISSION
   text-align: center;
   padding: 45px 25px 30px 25px;
   border: 1px solid transparent;
-  -webkit-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   border-radius: 5px;
   -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
@@ -888,7 +890,7 @@ HISTORY MISSION
 }
 
 .service-inner span {
-  color: #635CDB;
+  color: #635cdb;
 }
 
 /* ================================
@@ -918,7 +920,7 @@ SERVICE PAGE
   top: 0px;
   left: 0px;
   font-weight: 800;
-  opacity: .05;
+  opacity: 0.05;
   margin-top: -15px;
 }
 
@@ -951,8 +953,8 @@ SERVICE PAGE
 
 .pricing-block {
   text-align: center;
-  -webkit-transition: all .3s 0s ease;
-  transition: all .3s 0s ease;
+  -webkit-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease;
   border-radius: 5px;
   border: 1px solid #eee;
 }
@@ -970,9 +972,9 @@ SERVICE PAGE
   font-size: 50px;
   display: inline-block;
   border-radius: 100%;
-  -webkit-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
-  color: #635CDB;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #635cdb;
   border: 1px solid #eee;
 }
 
@@ -1005,8 +1007,18 @@ SERVICE PAGE
 }
 
 .pricing-block:hover i {
-  background-image: -webkit-linear-gradient(135deg, #2f1ce0 0%, #53a0fd 50%, #51eca5 100%);
-  background-iamge: -linear-gradient(135deg, #2f1ce0 0%, #53a0fd 50%, #51eca5 100%);
+  background-image: -webkit-linear-gradient(
+    135deg,
+    #2f1ce0 0%,
+    #53a0fd 50%,
+    #51eca5 100%
+  );
+  background-iamge: -linear-gradient(
+    135deg,
+    #2f1ce0 0%,
+    #53a0fd 50%,
+    #51eca5 100%
+  );
   color: #fff;
   border: 1px solid #53a0fd;
 }
@@ -1074,7 +1086,7 @@ PRICING PAGE
 }
 
 .carousel-indicators li.active {
-  background: #635CDB;
+  background: #635cdb;
 }
 
 .testimonial-content {
@@ -1124,10 +1136,11 @@ PRICING PAGE
 }
 
 .text-color {
-  color: #635CDB;
+  color: #635cdb;
 }
 
-input[type=text], input[type=email] {
+input[type="text"],
+input[type="email"] {
   height: 50px;
 }
 
@@ -1148,28 +1161,28 @@ input[type=text], input[type=email] {
 
 .form-control::-webkit-input-placeholder {
   color: #888;
-  opacity: .9;
+  opacity: 0.9;
   font-size: 13px;
   padding-left: 10px;
 }
 
 .form-control::-moz-placeholder {
   color: #888;
-  opacity: .9;
+  opacity: 0.9;
   font-size: 13px;
   padding-left: 10px;
 }
 
 .form-control:-ms-input-placeholder {
   color: #888;
-  opacity: .9;
+  opacity: 0.9;
   font-size: 13px;
   padding-left: 10px;
 }
 
 .form-control:-moz-placeholder {
   color: #888;
-  opacity: .9;
+  opacity: 0.9;
   font-size: 13px;
   padding-left: 10px;
 }
@@ -1202,8 +1215,8 @@ input[type=text], input[type=email] {
 
 .blog-block {
   overflow: hidden;
-  -webkit-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .blog-block img {
@@ -1225,7 +1238,7 @@ input[type=text], input[type=email] {
 
 .blog-block .read-more,
 .blog-block span {
-  color: #635CDB;
+  color: #635cdb;
 }
 
 /* =================================
@@ -1245,7 +1258,8 @@ BLOG PAGE
   font-size: 14px;
 }
 
-.blog-post .post-author span, .blog-post .post-info span {
+.blog-post .post-author span,
+.blog-post .post-info span {
   font-size: 14px;
 }
 
@@ -1254,7 +1268,7 @@ BLOG PAGE
   padding-left: 20px;
 }
 
-.category ul li {
+.widget_block ul li {
   margin-bottom: 10px;
   text-transform: capitalize;
   position: relative;
@@ -1263,22 +1277,22 @@ BLOG PAGE
   padding-bottom: 10px;
 }
 
-.category ul li:before {
+.widget_block ul li:before {
   position: absolute;
   content: "\f105";
   left: 0px;
   top: 0px;
   font-family: "Font Awesome 5 Free";
-  color: #635CDB;
+  color: #635cdb;
   font-weight: 900;
 }
 
-.tag a {
+.widget_tag_cloud a {
   text-transform: capitalize;
   padding: 5px 8px;
   border: 1px solid #eee;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 14px !important;
   display: inline-block;
 }
 
@@ -1288,7 +1302,7 @@ BLOG PAGE
   top: 0px;
   margin-right: 35px;
   margin-top: 15px;
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .download a {
@@ -1301,7 +1315,7 @@ BLOG PAGE
 
 .download a i {
   margin-right: 15px;
-  color: #635CDB;
+  color: #635cdb;
 }
 
 /* ==================================
@@ -1351,7 +1365,7 @@ BLOG SINGLE
 }
 
 .footer-widget h4 span {
-  color: #635CDB;
+  color: #635cdb;
   display: block;
   font-size: 60px;
   line-height: 60px;
@@ -1395,11 +1409,11 @@ BLOG SINGLE
 }
 
 .footer-text p.mail {
-  color: #635CDB;
+  color: #635cdb;
 }
 
 .bg-main {
-  background: #F4F8FB;
+  background: #f4f8fb;
 }
 
 .footer-widget a {
@@ -1613,7 +1627,8 @@ BLOG SINGLE
   /*----------------------
      SECTION HEAINDG
     -----------------------*/
-  #intro .section-heading, .section-heading {
+  #intro .section-heading,
+  .section-heading {
     width: 100%;
   }
   #intro .section-heading p {
