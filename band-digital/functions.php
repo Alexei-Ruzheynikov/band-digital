@@ -1043,4 +1043,12 @@ function my_action_callback() {
 	wp_die();
 }
 
+
+
+add_shortcode( 'admin_email', 'admin_email_shortcode' );
+
+function admin_email_shortcode( $atts ){
+	 return '<a href="mailto:'. get_option('admin_email') .'">' . get_option('admin_email') . '</a>';
+}
+
 ?>

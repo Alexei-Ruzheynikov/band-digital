@@ -63,11 +63,11 @@
 
           <div class="col-lg-5 pl-4 mt-4 mt-lg-0">
             <h4>Адрес офиса</h4>
-            <p class="mb-3">г. Москва, ул. 40 лет СССР, строение 3, офис 37</p>
+            <address class="mb-3"><?php echo the_field('address', $post->ID) ?></ф>
             <h4>Телефон</h4>
-            <p class="mb-3">+7 345 64 79 21</p>
+            <p class="mb-3"><?php echo the_field('phone', $post->ID) ?></p>
             <h4>E-Mail</h4>
-            <p class="mb-3">support@email.com</p>
+            <p class="mb-3"><?php echo the_field('email', $post->ID) ?></p>
           </div>
         </div>
       </div>
