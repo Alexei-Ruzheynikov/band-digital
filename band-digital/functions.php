@@ -72,7 +72,7 @@ function band_digital_scripts(){
     wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/plugins/counterup/jquery.waypoints.js', array('jquery'), null, true);
     wp_enqueue_script( 'counterup', get_template_directory_uri() . '/plugins/counterup/jquery.counterup.min.js', array('jquery'), null, true);
     wp_enqueue_script( 'google-map', get_template_directory_uri() . '/plugins/google-map/gmap3.min.js', array('jquery'), null, true);
-    wp_enqueue_script( 'contact', get_template_directory_uri() . '/plugins/jquery/contact.js', array('jquery'), null, true);
+    wp_enqueue_script( 'contact', get_template_directory_uri() . '/plugins/form/contact.js', array('jquery'), null, true);
     wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), null, true);
 
 }
@@ -969,5 +969,78 @@ register_post_type('partners', array(
 
 }
 
+
+
+add_action( 'phpmailer_init', 'my_phpmailer_example' );
+function my_phpmailer_example( $phpmailer ) {
+
+	$phpmailer->isSMTP();     
+	$phpmailer->Host = 'smtp.spaceweb.ru';
+	$phpmailer->Port = 465;
+	$phpmailer->Username = 'infos@mainweb-planet.ru';
+	$phpmailer->SMTPAuth = true; // Force it to use Username and Password to authenticate
+	$phpmailer->Password = '11111111Aa';
+
+	// Additional settings…
+	$phpmailer->SMTPSecure = "ssl"; // Choose SSL or TLS, if necessary for your server
+	$phpmailer->From = "infos@mainweb-planet.ru";
+	$phpmailer->FromName = "Wordpress";
+}
+
+
+// AJAX на фронтенде
+
+
+add_action( 'wp_ajax_my_action', 'my_action_callback' );
+add_action( 'wp_ajax_nopriv_my_action', 'my_action_callback' );
+function my_action_callback() {
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        # Подставляем емайл администратора
+        $mail_to = get_option('admin_email');
+        
+        # Собираем данные из формы
+        $phone = trim($_POST["phone"]);
+        $name = trim($_POST["name"]);
+        $email = trim($_POST["email"]);
+        $message = trim($_POST["message"]);
+        
+        if ( empty($name) OR empty($email) OR empty($phone) OR empty($message)) {
+            # Отправляем ошибку 400 и расшифровку
+            http_response_code(400);
+            echo "Пожалуйста, заполните все обязательные поля.";
+            exit;
+        }
+        
+        # Содержимое письма
+		$subject = 'Заявка с сайта ' . get_bloginfo('name');
+        $content = "Имя: $name\n";
+        $content .= "Email: $email\n\n";
+        $content .= "Сообщение:\n$message\n";
+
+        # Заголовок письма.
+        $headers = "From: Wordpress <infos@mainweb-planet.ru>";
+
+        # Попытка отправить письмо с помощью mail()
+        $success = wp_mail($mail_to, $subject, $content, $headers);
+        if ($success) {
+            # Set a 200 (okay) response code.
+            http_response_code(200);
+            echo "Спасибо! Ваше сообщение отправлено.";
+        } else {
+            # Set a 500 (internal server error) response code.
+            http_response_code(500);
+            echo "Упс! Что-то пошло не так, не получилось отправить сообщение.";
+        }
+
+    } else {
+        # Not a POST request, set a 403 (forbidden) response code.
+        http_response_code(403);
+        echo "Не получилось отправить, попробуйте позже.";
+    }
+
+	// выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	wp_die();
+}
 
 ?>
