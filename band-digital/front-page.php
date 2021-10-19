@@ -11,7 +11,7 @@ get_header();
               <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
                 <div class="banner-content content-padding">
                   <h5 class="subtitle"><?php echo get_post_meta($post->ID, 'subtitle', true);?></h5>
-                  <h1 class="banner-title"><?php echo get_post_meta($post->ID, 'banner-title', true);?></h1>
+                  <h1 class="banner-title"><?php the_field('title', $post->ID);?></h1>
                   <p>
                     <?php echo get_post_meta($post->ID, 'banner-description', true);?>
                   </p>
@@ -268,7 +268,48 @@ get_header();
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-sm-6 col-md-4">
+
+<?php		
+global $post;
+
+$query = new WP_Query( [
+	'posts_per_page' => 3,
+  'post_type' => 'post'
+] );
+
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		?>
+    <div class="col-lg-4 col-sm-6 col-md-4">
+      <div class="blog-block">
+        <?php the_post_thumbnail('post-thumnail',['class' => 'img-fluid']) ?>
+        <div class="blog-text">
+          <h6 class="author-name"><span>
+<?php 
+$category = get_the_category();
+echo $category[0]->name;
+?>
+          </span><?php the_author(); ?></h6>
+          <a href="<?php echo get_the_permalink(); ?>" class="h5 my-2 d-inline-block"> <?php the_title(); ?> </a>
+          
+          <?php the_excerpt(); ?>
+
+        </div>
+      </div>
+    </div>
+		<!-- Вывода постов, функции цикла: the_title() и т.д. -->
+		<?php 
+	}
+} else {
+	// Постов не найдено
+}
+
+wp_reset_postdata(); // Сбрасываем $post
+?>
+
+
+          <!-- <div class="col-lg-4 col-sm-6 col-md-4">
             <div class="blog-block">
               <img src="images/blog/blog-1.jpg" alt="" class="img-fluid" />
               <div class="blog-text">
@@ -305,7 +346,8 @@ get_header();
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </section>
@@ -318,28 +360,28 @@ get_header();
           <div class="col-lg-3 col-sm-6 col-md-6">
             <div class="counter-stat">
               <i class="icofont icofont-heart"></i>
-              <span class="counter">460</span>
+              <span class="counter"><?php echo the_field('clients', $post->ID); ?></span>
               <h5>счастливых клиентов</h5>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-md-6">
             <div class="counter-stat">
               <i class="icofont icofont-rocket"></i>
-              <span class="counter">60</span>
+              <span class="counter"><?php echo the_field('done-projects', $post->ID); ?></span>
               <h5>выполненных проектов</h5>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-md-6">
             <div class="counter-stat">
               <i class="icofont icofont-hand-power"></i>
-              <span class="counter">30</span>
+              <span class="counter"><?php echo get_post_meta($post->ID, 'team', true); ?></span>
               <h5>людей в команде</h5>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-md-6">
             <div class="counter-stat">
               <i class="icofont icofont-shield-alt"></i>
-              <span class="counter">25</span>
+              <span class="counter"><?php echo get_post_meta($post->ID, 'current-project', true); ?></span>
               <h5>Проектов в работе</h5>
             </div>
           </div>
