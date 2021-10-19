@@ -937,6 +937,36 @@ register_post_type('partners', array(
 		'supports'           => array('title','editor','author','thumbnail','excerpt','comments', 'custom-fields')
 	) );
 
+	register_post_type('testimonial', array(
+		'labels'             => array(
+			'name'               => __('Отзывы'), // Основное название типа записи
+			'singular_name'      => __('Отзыв'), // отдельное название записи типа Book
+			'add_new'            => __('Добавить новый'),
+			'add_new_item'       => __('Добавить новый Отзыв'),
+			'edit_item'          => __('Редактировать Отзыв'),
+			'new_item'           => __('Новый Отзыв'),
+			'view_item'          => __('Посмотреть Отзыв'),
+			'search_items'       => __('Найти Отзыв'),
+			'not_found'          => __('Отзывов не найдено'),
+			'not_found_in_trash' => __('В корзине Отзывв не найдено'),
+			'parent_item_colon'  => '',
+			'menu_name'          => __('Отзывы')
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'menu_icon'          => 'dashicons-format-status',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 8,
+		'supports'           => array('title','thumbnail','excerpt','comments', 'custom-fields')
+	) );
+
 }
 
 
