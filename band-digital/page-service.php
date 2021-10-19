@@ -96,151 +96,10 @@
         </section> -->
         <!--  SERVICE AREA END  -->
 
-        <!--  SERVICE PARTNER START  -->
-        <section id="service-head" class="service-style-two">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8 col-sm-12 m-auto">
-                <div class="heading text-white text-center">
-                  <h4 class="section-title text-white">Диджитал полного цикла</h4>
-              <p>
-                Это означает, что мы сможем выполнить любую цифровую задачу: <br />
-                видео, маркетинг, реклама, разработка или дизайн.
-              </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--  SERVICE PARTNER END  -->
-        <!--  SERVICE AREA START  -->
-    <section id="service">
-      <div class="container">
-        <div class="row">
-          <?php		
-          global $post;
-
-          $query = new WP_Query( [
-            'posts_per_page' => 6,
-            'post_type'        => 'service',
-          ] );
-
-          if ( $query->have_posts() ) {
-            while ( $query->have_posts() ) {
-              $query->the_post();
-              ?>
-              <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4><?php the_title(); ?></h4>
-                <p>
-                  <?php the_excerpt(); ?>
-                </p>
-              </div>
-            </div>
-          </div>
-              <?php 
-            }
-          } else {
-            ?>
-            <p>Услуг пока нет.</p>
-            <?php
-          }
-
-          wp_reset_postdata(); // Сбрасываем $post
-          ?>
-
-          <!-- <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/007-digital-marketing-3.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Видео маркетинг</h4>
-                <p>
-                  Охватите огромное количество пользователей и получите рекламу вашего продукта и услуги с помощью
-                  <span>видео маркетинга</span>.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/008-digital-marketing-2.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Email маркетинг</h4>
-                <p>
-                  Маркетинг по электронной почте-это отличное решение для охвата широкого круга клиентов, с нетерпением
-                  ожидающих получения услуги.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/003-task.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>SEO оптимизация</h4>
-                <p>
-                  мы предоставляем широкий спектр услуг seo, чтобы выдвинуть ваш сайт в топ по запросам, чтобы охватить
-                  ваших целевых клиентов.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/010-digital-marketing.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Собственный сайт</h4>
-                <p>
-                  Мы предоставляем индивидуальный веб-сайт для любого веб-сервиса небольшой и крупной компании в большом
-                  компактном пакете.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/006-analytics.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Контент маркетинг</h4>
-                <p>
-                  Создайте информационный сайт, чтобы заработать на нем, а мы вам в этом поможем: с помощью дизайна,
-                  разработки или SEO.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/004-hiring.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Ссылочная масса</h4>
-                <p>
-                  Чтобы ваш сайт вызывал больше доверия, мы обеспечим высокую цитируемость. На ваш сайт будут ссылаться
-                  авторитетные сайты.
-                </p>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </div>
-    </section>
-    <!--  SERVICE AREA END  -->
+<?php echo get_template_part('template-parts/content', 'service', [
+  'class' => 'service-style-two',
+  'custom_title' => 'Диджитал полного цикла'
+]); ?>
 
         <!--  PARTNER START  -->
     <section class="section-padding">
@@ -280,7 +139,7 @@
           wp_reset_postdata(); // Сбрасываем $post
           ?>
 
-          
+
           <!-- <div class="col-lg-3 col-sm-6 col-md-3 text-center">
             <img src="images/clients/client01.png" alt="partner" class="img-fluid" />
           </div>

@@ -26,7 +26,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-4 col-sm-6">
+        <?php echo get_template_part('template-parts/content', 'price'); ?> 
+
+          <!-- <div class="col-lg-4 col-sm-6">
             <div class="pricing-block">
               <div class="price-header">
                 <i class="icofont-diamond"></i>
@@ -94,7 +96,8 @@
 
               <a href="#" class="btn btn-hero btn-circled">выбрать тариф</a>
             </div>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </section>

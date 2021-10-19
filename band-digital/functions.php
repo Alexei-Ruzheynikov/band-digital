@@ -873,7 +873,7 @@ function my_custom_init(){
 		'menu_icon'          => 'dashicons-businessman',
 		'has_archive'        => true,
 		'hierarchical'       => false,
-		'menu_position'      => null,
+		'menu_position'      => 5,
 		'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
 	) );
 
@@ -903,8 +903,38 @@ register_post_type('partners', array(
 		'menu_icon'          => 'dashicons-info',
 		'has_archive'        => true,
 		'hierarchical'       => false,
-		'menu_position'      => null,
+		'menu_position'      => 6,
 		'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
+	) );
+
+	register_post_type('price', array(
+		'labels'             => array(
+			'name'               => __('Тарифы'), // Основное название типа записи
+			'singular_name'      => __('Тариф'), // отдельное название записи типа Book
+			'add_new'            => __('Добавить новый'),
+			'add_new_item'       => __('Добавить новый тариф'),
+			'edit_item'          => __('Редактировать тариф'),
+			'new_item'           => __('Новый тариф'),
+			'view_item'          => __('Посмотреть тариф'),
+			'search_items'       => __('Найти тариф'),
+			'not_found'          => __('Тарифов не найдено'),
+			'not_found_in_trash' => __('В корзине Тарифов не найдено'),
+			'parent_item_colon'  => '',
+			'menu_name'          => __('Тарифы')
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'menu_icon'          => 'dashicons-money-alt',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 7,
+		'supports'           => array('title','editor','author','thumbnail','excerpt','comments', 'custom-fields')
 	) );
 
 }

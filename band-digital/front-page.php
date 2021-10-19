@@ -133,117 +133,10 @@ get_header();
     </section>
     <!--  SERVICE AREA END  -->
 
-    <!--  SERVICE PARTNER START  -->
-    <section id="service-head" class="bg-feature">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-sm-12 m-auto">
-            <div class="section-heading text-white">
-              <h4 class="section-title">Диджитал полного цикла</h4>
-              <p>
-                Это означает, что мы сможем выполнить любую цифровую задачу: <br />
-                видео, маркетинг, реклама, разработка или дизайн.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--  SERVICE PARTNER END  -->
-
-    <!--  SERVICE AREA START  -->
-    <section id="service">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/007-digital-marketing-3.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Видео маркетинг</h4>
-                <p>
-                  Охватите огромное количество пользователей и получите рекламу вашего продукта и услуги с помощью
-                  <span>видео маркетинга</span>.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/008-digital-marketing-2.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Email маркетинг</h4>
-                <p>
-                  Маркетинг по электронной почте-это отличное решение для охвата широкого круга клиентов, с нетерпением
-                  ожидающих получения услуги.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/003-task.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>SEO оптимизация</h4>
-                <p>
-                  мы предоставляем широкий спектр услуг seo, чтобы выдвинуть ваш сайт в топ по запросам, чтобы охватить
-                  ваших целевых клиентов.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/010-digital-marketing.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Собственный сайт</h4>
-                <p>
-                  Мы предоставляем индивидуальный веб-сайт для любого веб-сервиса небольшой и крупной компании в большом
-                  компактном пакете.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/006-analytics.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Контент маркетинг</h4>
-                <p>
-                  Создайте информационный сайт, чтобы заработать на нем, а мы вам в этом поможем: с помощью дизайна,
-                  разработки или SEO.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-md-6">
-            <div class="service-box">
-              <div class="service-img-icon">
-                <img src="images/icon/004-hiring.png" alt="service-icon" class="img-fluid" />
-              </div>
-              <div class="service-inner">
-                <h4>Ссылочная масса</h4>
-                <p>
-                  Чтобы ваш сайт вызывал больше доверия, мы обеспечим высокую цитируемость. На ваш сайт будут ссылаться
-                  авторитетные сайты.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--  SERVICE AREA END  -->
+<?php echo get_template_part('template-parts/content', 'service', [
+  'class' => 'bg-feature',
+  'custom_title' => 'Наши услуги',
+]); ?>
     <!-- PRICE AREA START  -->
     <section id="pricing" class="section-padding bg-main">
       <div class="container">
@@ -256,7 +149,9 @@ get_header();
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-4 col-sm-6">
+          <?php echo get_template_part('template-parts/content', 'price'); ?> 
+
+          <!-- <div class="col-lg-4 col-sm-6">
             <div class="pricing-block">
               <div class="price-header">
                 <i class="icofont-diamond"></i>
@@ -324,7 +219,8 @@ get_header();
 
               <a href="#" class="btn btn-hero btn-circled">выбрать тариф</a>
             </div>
-          </div>
+          </div> -->
+          
         </div>
       </div>
     </section>
