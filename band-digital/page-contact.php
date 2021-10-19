@@ -73,14 +73,16 @@
       </div>
     </section>
     <!--  CONTACT END  -->
-
+<?php the_content(); ?>
     <!--  Google Map START  -->
-    <section id="map" class="section-padding">
+
+    <!-- <section id="map" class="section-padding">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-sm-6 col-md-3"></div>
         </div>
       </div>
-    </section>
+    </section> -->
+    
     <!--  Google Map END  -->
 <?php get_footer(); ?>
