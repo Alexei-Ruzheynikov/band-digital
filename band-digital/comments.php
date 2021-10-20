@@ -22,7 +22,7 @@ if ( post_password_required() ) {
                     'max_depth'         => '2', // максимальная вложенность
                     'style'             => 'ol', // во что оборачиваем комменты
                     'type'              => 'all',
-                    'reply_text'        => __('Ответить <i class="fa fa-reply"></i>'),
+                    'reply_text'        => __('To answer <i class="fa fa-reply"></i>'),
                     'per_page'          => '10',
                     'avatar_size'       => 80,
                     'format'            => 'html5', // или xhtml, если HTML5 не поддерживается темой
@@ -59,13 +59,13 @@ if ( post_password_required() ) {
 		<textarea class="form-control" id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required" placeholder="Комментарий"></textarea>
 	</div>',
 	'must_log_in'          => '<p class="must-log-in">' .
-		 sprintf( __( 'Вам нужно <a href="%s">войти</a>, чтобы оставить комментарий.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post->id ) ) ) ) . '
+		 sprintf( __( 'You need <a href="%s">to come in</a>, to leave a comment.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post->id ) ) ) ) . '
 	 </p>',
 	'logged_in_as'         => '<p class="logged-in-as">' .
-		 sprintf( __( '<a href="%1$s" aria-label="Вы вошли как %2$s.">Вы вошли как %2$s</a>. <a href="%3$s">Выйти?</a>' ), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post->id ) ) ) ) . '
+		 sprintf( __( '<a href="%1$s" aria-label="You are logged in as %2$s.">You are logged in as %2$s</a>. <a href="%3$s">Log off?</a>' ), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post->id ) ) ) ) . '
 	 </p>',
 	'comment_notes_before' => '<p class="comment-notes">
-		<span id="email-notes">' . __( 'Ваш E-mail защищен от спама.' ) . '</span>
+		<span id="email-notes">' . __( 'Your E-mail is protected from spam.' ) . '</span>
 	</p>',
 	'comment_notes_after'  => '',
 	'id_form'              => 'commentform',
@@ -73,14 +73,14 @@ if ( post_password_required() ) {
 	'class_form'           => 'comment-form',
 	'class_submit'         => 'btn btn-hero btn-circled',
 	'name_submit'          => 'submit',
-	'title_reply'          => __( 'Оставьте комментарий' ),
-	'title_reply_to'       => __( 'Ответить %s' ),
+	'title_reply'          => __( 'Leave a comment' ),
+	'title_reply_to'       => __( 'To answer %s' ),
 	'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title">',
 	'title_reply_after'    => '</h3>',
 	'cancel_reply_before'  => ' <small>',
 	'cancel_reply_after'   => '</small>',
-	'cancel_reply_link'    => __( 'Отменить отправку' ),
-	'label_submit'         => __( 'Отправить комментарий' ),
+	'cancel_reply_link'    => __( 'Cancel sending' ),
+	'label_submit'         => __( 'Submit Comment' ),
 	'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" >%4$s</button>',
 	'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
 	'format'               => 'html5',

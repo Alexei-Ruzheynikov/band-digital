@@ -9,16 +9,16 @@
                     <h1 class="text-white">
                         <?php              
                             if( is_category() ){
-                                echo __('<small>Рубрика </small><br>') . get_queried_object()->name;
+                                echo '<small>' . __('Heading ') . '</small><br>' . get_queried_object()->name;
                             }
                             if( is_tag() ){
-                                echo __('<small>Записи с меткой </small><br> ') . get_queried_object()->name;
+                                echo __('<small>Posts tagged </small><br> ') . get_queried_object()->name;
                             }
                             if( is_author() ){
-                                echo __('<small>Записи автора </small><br>') . get_the_author_meta('display_name');
+                                echo __('<small>Authors notes </small><br>') . get_the_author_meta('display_name');
                             }
                             if( is_date() ){
-                                echo __('<small>Архив по дате </small><br>') . get_the_date('j F Y');
+                                echo __('<small>Archive by date </small><br>') . get_the_date('j F Y');
                             }
                         ?>
                     </h1>
@@ -108,8 +108,8 @@
                 <?php endif; ?>
                 <div class="col-lg-12">
                     <?php the_posts_pagination( array(
-                        'prev_text'    => __('<span class="p-2 border">« Предыдущие посты</span>'),
-	                    'next_text'    => __('<span class="p-2 border">Следующие посты »</span>'),
+                        'prev_text'    => __('<span class="p-2 border">« Previous Posts</span>'),
+	                    'next_text'    => __('<span class="p-2 border">Next posts »</span>'),
                         'before_page_number' => '<span class="p-2 border">',
                     	'after_page_number'  => '</span>'
                     )); ?>

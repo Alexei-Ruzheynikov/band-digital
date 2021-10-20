@@ -28,7 +28,7 @@
                 <li><a href="#">цены</a></li>
                 <li><a href="#">команда</a></li>
                 <li><a href="#">отзывы</a></li>
-                <li><a href="#">журнал</a></li>
+                <li><a href="#">Журнал</a></li>
               </ul>
             </div> -->
           </div>
