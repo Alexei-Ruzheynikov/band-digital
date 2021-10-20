@@ -72,7 +72,7 @@
         </div>
         <div class="row">
           <div class="col-lg-12 text-center">
-            <div class="footer-copy">© <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>  inc. Все права защищены.</div>
+            <div class="footer-copy">© <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>  inc. Все права защищены</div>
           </div>
         </div>
       </div>
