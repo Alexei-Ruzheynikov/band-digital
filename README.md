@@ -1,5 +1,5 @@
 # band-digital
-
+http://band-digital.mainweb-planet.ru/
 В проекте сделано:
 1) SFTP подключение для работы с хостингом напрямую.
 2) Шапка и подвал сайта.
